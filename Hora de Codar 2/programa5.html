@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var valores = [];
+
+        for (var i = 1; i <= 6; i++) {
+            var valor = parseFloat(prompt("Digite o " + i + "º valor:"));
+            if (!isNaN(valor)) {
+                valores.push(valor);
+            } else {
+                alert("Por favor, digite um valor válido.");
+                i--;
+            }
+        }
+
+        var soma = 0;
+        for (var j = 0; j < valores.length; j++) {
+            soma += valores[j];
+        }
+        var media = soma / valores.length;
+
+        alert("Números informados: " + valores.join(", "));
+        
+        alert("Média aritmética: " + media.toFixed(2));
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

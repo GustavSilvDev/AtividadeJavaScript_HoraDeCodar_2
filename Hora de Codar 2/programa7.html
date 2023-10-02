@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var numeros = [];
+        var soma = 0;
+
+        for (var i = 1; i <= 6; i++) {
+            var numero = parseFloat(prompt("Digite o " + i + "º número:"));
+            numeros.push(numero);
+
+            if (!isNaN(numero) && numero < 72) {
+                soma += numero;
+            }
+        }
+
+        alert("Valores informados: " + numeros.join(", "));
+        alert("Soma dos números inferiores a 72: " + soma);
+
+
+    </script>
+
+
+
+</head>
+
+
+
+<body>
+
+</body>
+
+</html>

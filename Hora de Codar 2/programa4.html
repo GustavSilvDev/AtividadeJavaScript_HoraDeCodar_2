@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var valor1 = parseFloat(prompt("Digite o primeiro valor:"));
+        var valor2 = parseFloat(prompt("Digite o segundo valor:"));
+        var valor3 = parseFloat(prompt("Digite o terceiro valor:"));
+
+        if (!isNaN(valor1) && !isNaN(valor2) && !isNaN(valor3)) {
+            var maior = Math.max(valor1, valor2, valor3);
+            var valoresRestantes = [valor1, valor2, valor3].filter(function (valor) {
+                return valor !== maior;
+            });
+
+            var somaDosMaiores = valoresRestantes[0] + valoresRestantes[1];
+
+            alert("A soma dos dois maiores valores é: " + somaDosMaiores);
+
+        } else {
+            alert("Por favor, digite valores válidos.");
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

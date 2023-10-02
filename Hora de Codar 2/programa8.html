@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var numeros = [];
+        var soma = 0;
+
+        for (var i = 1; i <= 4; i++) {
+            var numero = parseFloat(prompt("Digite o " + i + "º número:"));
+
+            if (!isNaN(numero) && numero > 0 && numero < 10) {
+                numeros.push(numero);
+                soma += numero;
+            } else {
+                alert("Por favor, digite um número válido entre 0 e 10.");
+                i--;
+            }
+        }
+
+        if (numeros.length > 0) {
+            var media = soma / numeros.length;
+
+            if (media > 5) {
+                alert("Você passou no teste.");
+            } else {
+                alert("Tente novamente.");
+            }
+        } else {
+            alert("Não foi possível calcular a média devido aos valores inválidos.");
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
